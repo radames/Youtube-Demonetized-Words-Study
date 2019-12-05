@@ -1,6 +1,6 @@
 # Youtube-Demonetized-Words-Study
 
-This is an example of embeding an Observable notebook into a static vuejs/nuxtjs page.
+This is an example of embeding an [Observable notebook](https://observablehq.com/@radames/youtube-demonetized-words-similarity-study) into a static [vuejs](https://vuejs.org/)/[nuxtjs](https://nuxtjs.org/) page.
 
 The main trick here is to transpile the notebook ES module during build time. You have to edit you  `nuxt.config.js` and add the following
 
