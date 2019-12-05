@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div ref="chart"></div>
+    <h1>Youtube Demonetized Words Similarity Study</h1>
+
+    <div ref="chartRef" class="char"></div>
   </div>
 </template>
 
@@ -17,22 +19,45 @@ export default {
   },
   mounted() {
     const runtime = new Runtime()
+    const inspect = Inspector.into(this.$refs.chartRef)
     this.notebookModule = runtime.module(notebook, (name) => {
-      if (name === 'chart') {
-        return new Inspector(this.$refs.chart)
-      }
+      return name === 'chart' && inspect()
     })
   }
 }
 </script>
 
 <style>
-/* .container {
-  margin: 0 auto;
-  min-height: 100vh;
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
+  flex-direction: column;
+}
+.chart {
+  height: auto;
+  width: 100%;
+}
+
+.tooltip * {
+  box-sizing: border-box;
+}
+.tooltip {
+  position: absolute;
+  overflow: scroll;
+  padding: 10px;
+  font: 15px sans-serif;
+  background: rgb(255, 255, 255);
+  pointer-events: none;
+  display: flex;
+  flex-grow: 2;
+  z-index: 10000;
+  color: #333333;
+  border: 0.5px solid #333333;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px #333333;
+}
+
+.annotation-note-title,
+text.title {
+  font-weight: bold;
+}
 </style>
