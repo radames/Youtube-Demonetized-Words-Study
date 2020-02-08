@@ -9,6 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "gh-pages": "npm run generate && cd _site && git add . && git commit --amend --no-edit && git push  origin gh-pages --force",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
