@@ -3,6 +3,9 @@ export default {
   /*
    ** Headers of the page
    */
+  router: {
+    base: `/${process.env.npm_package_name}` // has to match github project name to work with githubpages, in this example works with package name
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
