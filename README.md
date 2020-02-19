@@ -16,8 +16,9 @@ The main trick here is to transpile the notebook ES module during build time. Yo
   }
 ```
 
-Don't forget you have to install your notebook and a custom webpack meta loader
+Don't forget you have to install your notebook and a custom webpack meta loader and observable runtime
 ```
+npm install @observablehq/runtime
 npm install @open-wc/webpack-import-meta-loader
 npm install "https://api.observablehq.com/@radames/youtube-demonetized-words-similarity-study.tgz?v=3"
 ```

@@ -1,5 +1,7 @@
 export default {
-  mode: 'universal',
+  telemetry: false,
+  target: 'static',
+
   /*
    ** Headers of the page
    */
@@ -36,7 +38,11 @@ export default {
         sizes: '16x16',
         href: 'favicon/favicon-16x16.png'
       },
-      { rel: 'manifest', href: 'favicon/site.webmanifest' }
+      { rel: 'manifest', href: 'favicon/site.webmanifest' },
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css',
+      },
     ]
   },
   /*
@@ -66,12 +72,7 @@ export default {
    ** Build configuration
    */
   build: {
-    transpile: ['@radames/youtube-demonetized-words-similarity-study'],
-    extend(config, ctx) {
-      config.module.rules.push({
-        test: /\.js$/,
-        loader: require.resolve('@open-wc/webpack-import-meta-loader')
-      })
-    }
+    standalone: true,
+    // transpile: ['@radames/youtube-demonetized-words-similarity-study'],
   }
 }
