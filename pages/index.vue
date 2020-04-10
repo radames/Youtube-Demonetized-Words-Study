@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Youtube Demonetized Words Similarity Study</h1>
 
-    <div ref="chartRef" class="char"></div>
+    <div ref="chartRef" class="chart"></div>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   components: {},
   data() {
     return {
-      notebookModule: null
+      notebookModule: null,
     }
   },
   mounted() {
@@ -23,7 +23,7 @@ export default {
     this.notebookModule = runtime.module(notebook, (name) => {
       return name === 'chart' && inspect()
     })
-  }
+  },
 }
 </script>
 

@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   router: {
-    base: `/${process.env.npm_package_name}` // has to match github project name to work with githubpages, in this example works with package name
+    base: `/${process.env.npm_package_name}`, // has to match github project name to work with githubpages, in this example works with package name
   },
   head: {
     title: process.env.npm_package_name || '',
@@ -14,30 +14,30 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon/favicon.ico' },
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
-        href: 'favicon/apple-touch-icon.png'
+        href: 'favicon/apple-touch-icon.png',
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: 'favicon/favicon-32x32.png'
+        href: 'favicon/favicon-32x32.png',
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        href: 'favicon/favicon-16x16.png'
+        href: 'favicon/favicon-16x16.png',
       },
-      { rel: 'manifest', href: 'favicon/site.webmanifest' }
-    ]
+      { rel: 'manifest', href: 'favicon/site.webmanifest' },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -56,7 +56,7 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
   ],
   /*
    ** Nuxt.js modules
@@ -70,8 +70,8 @@ export default {
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.js$/,
-        loader: require.resolve('@open-wc/webpack-import-meta-loader')
+        loader: require.resolve('@open-wc/webpack-import-meta-loader'),
       })
-    }
-  }
+    },
+  },
 }

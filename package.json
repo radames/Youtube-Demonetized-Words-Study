@@ -13,19 +13,19 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@observablehq/runtime": "^4.6.4",
-    "@open-wc/webpack-import-meta-loader": "^0.4.1",
+    "@observablehq/runtime": "^4.7.0",
+    "@open-wc/webpack-import-meta-loader": "^0.4.4",
     "@radames/youtube-demonetized-words-similarity-study": "https://api.observablehq.com/@radames/youtube-demonetized-words-similarity-study.tgz?v=3",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.12.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
-    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-nuxt": "^0.5.2",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4"
+    "prettier": "^2.0.4"
   }
 }
